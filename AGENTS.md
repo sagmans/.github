@@ -12,3 +12,8 @@ other bypass. The files in `.githooks/` and `scripts/setup-hooks` are copies of
 the dotf template (`templates/githooks/`); change them there, not here.
 
 Commit with `git commit -s -S -m`. Tag with `git tag -s <tag> -m "<message>"`.
+
+Commit messages follow `.githooks/GIT_CONVENTION.md`, which `commit-msg` and
+`pre-push` enforce. The generic checks need gitleaks, osv-scanner, semgrep,
+lizard and markdownlint-cli2, plus actionlint and zizmor when a push changes
+workflow files. A missing tool blocks the hook.
